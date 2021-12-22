@@ -1,0 +1,91 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": [
+    // "next",
+    "airbnb",
+    "airbnb/hooks",
+    "eslint:recommended",
+    "plugin:@next/next/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:compat/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "plugin:jsx-a11y/recommended",
+    "plugin:prettier/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "createDefaultProgram": true
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "compat",
+    "import",
+    "import-helpers",
+    "jsx-a11y",
+    "no-secrets",
+    "prettier",
+    "react",
+    "react-hooks"
+  ],
+  "rules": {
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-empty-interface": "off",
+    "@typescript-eslint/no-shadow": ["error"],
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "@typescript-eslint/no-var-requires": "off",
+    "compat/compat": "error",
+    "import/extensions": [
+      "error",
+      { "ts": "never", "tsx": "never", "json": "always" }
+    ],
+    "import/prefer-default-export": "off",
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "alphabetize": { "order": "asc", "ignoreCase": false },
+        "groups": [
+          "/^react/",
+          "/^next/",
+          "module",
+          ["/^(components|store|styles|views|utils)/"],
+          "sibling",
+          "parent",
+          "index"
+        ],
+        "newlinesBetween": "never"
+      }
+    ],
+    "no-restricted-syntax": "off",
+    "no-secrets/no-secrets": "error",
+    "no-shadow": "off",
+    "no-use-before-define": "off",
+    "prettier/prettier": ["error", { "endOfLine": "auto" }],
+    "react/button-has-type": "warn",
+    "react/function-component-definition": [
+      "warn",
+      { "namedComponents": "arrow-function" }
+    ],
+    "react/prop-types": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
+    "react/jsx-props-no-spreading": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["./"],
+        "extensions": [".ts", ".tsx"]
+      }
+    }
+  }
+}

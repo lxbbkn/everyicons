@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "stylelint-config-idiomatic-order",
+    "stylelint-config-recommended"
+  ],
+  "customSyntax": "@stylelint/postcss-css-in-js",
+  "rules": {
+    "rule-empty-line-before": "always",
+    "at-rule-empty-line-before": "always",
+    "no-empty-source": null
+  }
+}
