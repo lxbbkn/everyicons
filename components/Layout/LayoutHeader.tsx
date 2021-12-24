@@ -51,7 +51,11 @@ const LayoutHeader: React.FC = () => {
 
   const items = useMemo(() => {
     const handleGitHub = () => {
-      window.open('https://github.com', '_blank', 'noopener,noreferrer')
+      window.open(
+        'https://github.com/lxbbkn/everyicons',
+        '_blank',
+        'noopener,noreferrer',
+      )
     }
 
     return [
